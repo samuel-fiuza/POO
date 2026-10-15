@@ -37,3 +37,16 @@ Contato c2 = new Contato("Bruno", "(21) 98888-1111");
 
 c1.Exibir();
 c2.Exibir();
+
+//Exercicios de Encapsulamento
+//1. Contador de Visitas
+
+ContVisit contador = new ContVisit();
+
+contador.RegistrarVisitas();
+contador.RegistrarVisitas();
+contador.RegistrarVisitas();
+
+Console.WriteLine($"Total de visitas: {contador.ValorTotal()}");
+
+//2. Boletim
