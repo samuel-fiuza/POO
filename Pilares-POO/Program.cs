@@ -50,3 +50,10 @@ contador.RegistrarVisitas();
 Console.WriteLine($"Total de visitas: {contador.ValorTotal()}");
 
 //2. Boletim
+Boletim boletim = new Boletim();
+boletim.Aluno = "Samuel";
+
+boletim.DefinirNota(8.5);
+boletim.DefinirNota(15);
+
+Console.WriteLine($"{boletim.Aluno}: nota {boletim.ObterNota()}");
