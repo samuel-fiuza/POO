@@ -1,7 +1,9 @@
 ﻿
 using Pilares_POO;
 using PIlares_POO;
-
+using PIlares_POO.Hrenca;
+using System.Globalization;
+/*
 Carro carro1 = new Carro("Hyundai", "HB20" );
 Console.WriteLine(carro1.Marca);
 Console.WriteLine(carro1.Modelo);
@@ -12,8 +14,10 @@ Console.WriteLine(carro1.Modelo);
 //Encapsulamento - protege classes. atributos e métodos
 //public, inter e private são encapsulamentos
 //public - Acessado de qualquer lugar
-//private Acessar de dentro da classe
+//private Acessar de dentro da classe             
 //inter - Acessar do projeto
+//GET - função de ler o valor
+//SET - função de mudar o valor
 ContaBancaria conta1 = new ContaBancaria();
 //conta1.Saldo = -500; (exemplo de algo que daria errado)
 
@@ -57,3 +61,37 @@ boletim.DefinirNota(8.5);
 boletim.DefinirNota(15);
 
 Console.WriteLine($"{boletim.Aluno}: nota {boletim.ObterNota()}");
+
+//Herança ("explicação" na pasta "herança" atraves das classe) 
+Aluno aluno  = new Aluno();
+
+aluno.Idade = 20;
+aluno.Nome = "Bruno";
+
+aluno.Apresentar();
+*/
+
+//Exercicios de herança
+//1. Animal e Cachorro
+Cachorro cachorro = new Cachorro();
+cachorro.Nome = "Rex";
+
+cachorro.Comer();
+cachorro.Latir();
+
+//2. Funcionario e Gerente
+Funcionario ana = new Funcionario("Ana", 3000);
+Gerente carlos = new Gerente("Carlos", 5000, 1500);
+
+Console.WriteLine($"{ana.Nome}: R${ana.Salario}");
+Console.WriteLine($"{carlos.Nome}: R${carlos.Salario} + bonus = R${carlos.SalarioComBonus()}");
+
+//3. Veiculo, Carro e Moto
+Carro1 carro = new Carro1("Fiat", "Uno", 4);
+Moto moto = new Moto("Honda", "CG 160", 160);
+
+carro.Exibir();
+carro.ExibirPortas();
+
+moto.Exibir();
+moto.ExibirCilindradas();
