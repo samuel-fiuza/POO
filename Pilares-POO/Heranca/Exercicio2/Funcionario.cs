@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace PIlares_POO.Hrenca
+namespace PIlares_POO.Heranca.Exercicio2
 {
     internal class Funcionario
     {

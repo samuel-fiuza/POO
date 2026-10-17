@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PIlares_POO.Heranca.Exercicio2;
+using System;
 using System.Collections.Generic;
 using System.Text;
 

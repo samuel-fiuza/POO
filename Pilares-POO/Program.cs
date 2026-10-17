@@ -2,6 +2,9 @@
 using Pilares_POO;
 using PIlares_POO;
 using PIlares_POO.Hrenca;
+using PIlares_POO.Polimorfismo.Exercicio1;
+using PIlares_POO.Polimorfismo.Exercicio2;
+using PIlares_POO.Polimorfismo.Exercicio3;
 using System.Globalization;
 /*
 Carro carro1 = new Carro("Hyundai", "HB20" );
@@ -69,7 +72,7 @@ aluno.Idade = 20;
 aluno.Nome = "Bruno";
 
 aluno.Apresentar();
-*/
+
 
 //Exercicios de herança
 //1. Animal e Cachorro
@@ -87,11 +90,42 @@ Console.WriteLine($"{ana.Nome}: R${ana.Salario}");
 Console.WriteLine($"{carlos.Nome}: R${carlos.Salario} + bonus = R${carlos.SalarioComBonus()}");
 
 //3. Veiculo, Carro e Moto
-Carro1 carro = new Carro1("Fiat", "Uno", 4);
+Carro1 carro = new Carro1 ("Fiat", "Uno", 4);
 Moto moto = new Moto("Honda", "CG 160", 160);
 
 carro.Exibir();
 carro.ExibirPortas();
 
 moto.Exibir();
-moto.ExibirCilindradas();
+moto.ExibirCilindradas(); 
+
+
+//Polimorfismo (muitas formas: uma mesma funçaõ pode ter muitas formas | uma funçaõ pode fazer coisas diferentes
+//polimorfismo pode atuar de duas maneiras diferentes que são:
+//-- sobrecarga: Mesmo metodo(nome) com parametros diferentes
+//-- sobrescrita: pode ter dois metodos virtual e overrider (sobrescrita precisa de herança)
+//virtual - da permissão para o metodo ser sobrescrito
+//override - Sobrescreve
+
+//Exercicios de polimorfismo
+//1. Saudações
+Saudacao s = new Saudacao();
+
+s.Comprimentar();
+s.Comprimentar("Samuel");
+s.Comprimentar("Samuel", 16);
+
+//2. Calculadora de area
+CalculadoraDeArea calc = new CalculadoraDeArea();
+
+Console.WriteLine(calc.CalcularArea(4));
+Console.WriteLine(calc.CalcularArea(5, 10));
+
+//3. Instrumento e violão
+Instrumento instrumento = new Instrumento();
+Violao violao = new Violao();
+
+instrumento.Tocar();
+violao.Tocar();
+
+*/ 

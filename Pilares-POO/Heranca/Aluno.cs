@@ -1,8 +1,9 @@
-﻿using System;
+﻿using PIlares_POO.Hrenca;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace PIlares_POO.Hrenca
+namespace PIlares_POO.Heranca.Exercicio1
 {
     //Pega atributos e metodos da classe "Pai"
     internal class Aluno : Pessoa
