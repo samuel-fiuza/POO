@@ -4,7 +4,7 @@ using System.Text;
 
 namespace PIlares_POO.Abstracao
 {
-    internal interface INotificador
+    public interface INotificador
     {
         //Apenas metodos
         void Enviar(string mensagem);
@@ -22,6 +22,15 @@ namespace PIlares_POO.Abstracao
         public void Enviar(string mensagem)
         {
             Console.WriteLine($"Mensagem SMS enviada: {mensagem}");
+        }
+    }
+
+    public class Loja
+    {
+        //Da problema se Inotificador não estiver publico pois se é recomendado fazer tudo em uma pasta separada
+        public void Finalizar(INotificador notificador)
+        {
+            notificador.Enviar("compra finaizada");
         }
     }
 }
